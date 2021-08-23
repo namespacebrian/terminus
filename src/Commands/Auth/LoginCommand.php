@@ -13,12 +13,13 @@ class LoginCommand extends TerminusCommand
 {
 
     public static $HELP_TEXT = [
-        "*******************************************************************************",
-        "* THIS IS AN EARLY VERSION OF TERMINUS 3.0. NOT ALL THE COMMANDS ARE WORKING  *",
-        "* AND IT'S NOT 100% COMPATIBLE WITH PHP 8 BUT WE'RE GETTING THERE.            *",
-        "* If you find a bug you think needs to be addressed, please add the bug to    *",
-        "* terminus issue queue: https://github.com/pantheon-systems/terminus/issues   *",
-        "*******************************************************************************",
+        ""
+        // "*******************************************************************************",
+        // "* THIS IS AN EARLY VERSION OF TERMINUS 3.0. NOT ALL THE COMMANDS ARE WORKING  *",
+        // "* AND IT'S NOT 100% COMPATIBLE WITH PHP 8 BUT WE'RE GETTING THERE.            *",
+        // "* If you find a bug you think needs to be addressed, please add the bug to    *",
+        // "* terminus issue queue: https://github.com/pantheon-systems/terminus/issues   *",
+        // "*******************************************************************************",
     ];
 
     /**
