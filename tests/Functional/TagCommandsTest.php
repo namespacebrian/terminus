@@ -25,7 +25,7 @@ class TagCommandsTest extends TestCase
      * @covers \Pantheon\Terminus\Commands\Tag\RemoveCommand
      *
      * @group tag
-     * @group short
+     * @group shorter
      */
     public function testTagAddListRemove()
     {
@@ -44,7 +44,7 @@ class TagCommandsTest extends TestCase
 
         // REMOVE
         $this->terminus("tag:remove {$siteName} {$orgId} {$newTag}", null);
-        
+
         $tagList2 = $this->terminusJsonResponse("tag:list {$siteName} {$orgId}");
         $this->assertNotContains($newTag, $tagList2, "Tag list should no longer contain new tag");
     }

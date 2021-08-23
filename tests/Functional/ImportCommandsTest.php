@@ -21,7 +21,7 @@ class ImportCommandsTest extends TestCase
      * @covers \Pantheon\Terminus\Commands\Import\DatabaseCommand
      *
      * @group import
-     * @group short
+     * @group shorter
      */
     public function testImportDatabase()
     {
@@ -41,7 +41,7 @@ class ImportCommandsTest extends TestCase
      * @covers \Pantheon\Terminus\Commands\Import\FilesCommand
      *
      * @group import
-     * @group short
+     * @group shorter
      */
     public function testImportFiles()
     {
@@ -72,7 +72,7 @@ class ImportCommandsTest extends TestCase
      * @covers \Pantheon\Terminus\Commands\Import\CompleteCommand
      *
      * @group import
-     * @group short
+     * @group shorter
      */
     public function testImportComplete()
     {

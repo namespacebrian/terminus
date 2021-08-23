@@ -25,7 +25,7 @@ class EnvCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Env\ClearCacheCommand
      * @group env
-     * @group short
+     * @group shorter
      * @throws \JsonException
      */
     public function testClearCacheCommand()
@@ -38,7 +38,7 @@ class EnvCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Env\DeployCommand
      * @group env
-     * @group short
+     * @group shorter
      * @throws \JsonException
      */
     public function testDeployCommand()
@@ -64,7 +64,7 @@ class EnvCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Env\CodeLogCommand
      * @group env
-     * @group short
+     * @group shorter
      * @throws \JsonException
      */
     public function testCodelogCommand()
@@ -114,7 +114,7 @@ class EnvCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Env\InfoCommand
      * @group env
-     * @group short
+     * @group shorter
      * @throws \JsonException
      */
     public function testInfoCommand()
@@ -148,7 +148,7 @@ class EnvCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Env\MetricsCommand
      * @group env
-     * @group short
+     * @group shorter
      * @throws \JsonException
      */
     public function testMetricsCommand()
@@ -181,7 +181,7 @@ class EnvCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Env\ListCommand
      * @group env
-     * @group short
+     * @group shorter
      * @throws \JsonException
      */
     public function testListCommand()

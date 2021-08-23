@@ -18,7 +18,7 @@ class OrgCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Org\ListCommand
      * @group org
-     * @group short
+     * @group shorter
      */
     public function testOrgListCommand()
     {
@@ -41,7 +41,7 @@ class OrgCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Org\People\ListCommand
      * @group org
-     * @group short
+     * @group shorter
      */
     public function testOrgPeopleListCommand()
     {
@@ -72,7 +72,7 @@ class OrgCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Org\Site\ListCommand
      * @group org
-     * @group short
+     * @group shorter
      */
     public function testOrgSiteListCommand()
     {
@@ -95,7 +95,7 @@ class OrgCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Org\Upstream\ListCommand
      * @group org
-     * @group short
+     * @group shorter
      */
     public function testOrgUpstreamList()
     {

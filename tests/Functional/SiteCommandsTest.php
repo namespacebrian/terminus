@@ -20,7 +20,7 @@ class SiteCommandsTest extends TestCase
      * @test
      * @covers \Pantheon\Terminus\Commands\Site\ListCommand
      * @group site
-     * @group short
+     * @group shorter
      */
     public function testSiteListCommand()
     {
@@ -58,7 +58,7 @@ class SiteCommandsTest extends TestCase
      * @covers \Pantheon\Terminus\Commands\Site\Org\ListCommand
      * @throws \JsonException
      * @group site
-     * @group short
+     * @group shorter
      */
     public function testSiteOrgListCommand()
     {
@@ -82,7 +82,7 @@ class SiteCommandsTest extends TestCase
      * @covers \Pantheon\Terminus\Commands\Site\Org\ListCommand
      * @throws \JsonException
      * @group site
-     * @group short
+     * @group shorter
      */
     public function testSiteOrgsCommand()
     {

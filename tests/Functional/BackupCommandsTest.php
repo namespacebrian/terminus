@@ -29,7 +29,7 @@ class BackupCommandsTest extends TestCase
      * @covers \Pantheon\Terminus\Commands\Backup\CreateCommand
      *
      * @group backup
-     * @group short
+     * @group shorter
      */
     public function testCreateListInfoGetCommand()
     {
@@ -105,7 +105,7 @@ class BackupCommandsTest extends TestCase
      * @covers \Pantheon\Terminus\Commands\Backup\GetCommand
      *
      * @group backup
-     * @group short
+     * @group shorter
      */
     public function testBackupGetLatest()
     {
