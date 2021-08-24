@@ -107,6 +107,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  package_macos:
+    runs-on: macos-latest
+    name: Package a Homebrew release
+    if: ${{ startsWith(github.ref, 'refs/tags/')  && github.repository_owner == 'namespacebrian' }}
+    needs: [ 'release' ]
+    steps:
+      - name: Bump Homebrew formula
+        uses: dawidd6/action-homebrew-bump-formula@v3
+        with:
+          token: ${{secrets.GITHUB_API_TOKEN}}
+          formula: lazygit
+
   # functional_tests:
   #   runs-on: ubuntu-latest
   #   name: Tagged Release Functional Tests
