@@ -117,6 +117,10 @@
       "XDEBUG_MODE=coverage phpunit --colors=always -c ./phpunit.xml --debug --group=short --do-not-cache-result",
       "@coverage"
     ],
+    "test:shorter": [
+      "XDEBUG_MODE=coverage phpunit --colors=always -c ./phpunit.xml --debug --group=shorter --do-not-cache-result",
+      "@coverage"
+    ],
     "test:functional": [
       "XDEBUG_MODE=coverage phpunit --colors=always -c ./phpunit.xml --debug --do-not-cache-result",
       "@coverage"
