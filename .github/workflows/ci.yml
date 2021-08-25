@@ -117,7 +117,7 @@ jobs:
         uses: dawidd6/action-homebrew-bump-formula@v3
         with:
           token: ${{secrets.GITHUB_API_TOKEN}}
-          formula: lazygit
+          formula: namespacebrian/terminus/t3
 
   # functional_tests:
   #   runs-on: ubuntu-latest
