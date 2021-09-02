@@ -15,8 +15,6 @@ jobs:
       TZ: "/usr/share/zoneinfo/America/Los_Angeles"
       TERM: dumb
     steps:
-      - name: Print github.ref and sha
-        run: echo "REF[$GITHUB_REF] SHA[$GITHUB_SHA]"
       - name: Checkout
         uses: actions/checkout@v2
       - name: Save repo content as artifact
@@ -26,6 +24,8 @@ jobs:
           path: /home/runner/work/terminus/terminus
       - name: Full Composer Install
         run: composer install
+      - name: Print github.ref and sha
+        run: echo "REF[$GITHUB_REF] SHA[$GITHUB_SHA]"
       - name: Validate Code
         run: composer code:lint
       - name: Phar Build
@@ -43,7 +43,7 @@ jobs:
   commit:
     runs-on: ${{ matrix.operating-system }}
     name: Commit testing matrix - PHP ${{ matrix.php-versions }} on ${{ matrix.operating-system }}
-    if: ${{ ! startsWith(github.ref, 'refs/tags/')  && github.repository_owner == 'pantheon-systems' }}
+    if: ${{ ! startsWith(github.ref, 'refs/tags/') }}
     strategy:
       matrix:
         operating-system: [ 'macos-latest' ]
@@ -108,7 +108,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Behat Tests
     needs: [ checkout_build ]
-    if: ${{ startsWith(github.ref, 'refs/tags/')  && github.repository_owner == 'pantheon-systems' }}
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
     strategy:
       matrix:
         php-versions: [ '7.4', '8.0' ]
@@ -150,7 +150,7 @@ jobs:
         # TODO: test on Win10/WSL+Ubunutu
         operating-system: [ 'macos-latest', 'ubuntu-latest' ]
         php-versions: [ '7.4', '8.0' ]
-    if: ${{ startsWith(github.ref, 'refs/tags/') && github.repository_owner == 'pantheon-systems' }}
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
     steps:
       - name: Download repo content from artifact
         uses: actions/download-artifact@v2
@@ -192,7 +192,7 @@ jobs:
   package_macos:
     runs-on: macos-latest
     name: Package a Homebrew release
-    if: ${{ startsWith(github.ref, 'refs/tags/')  && github.repository_owner == 'pantheon-systems' }}
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
     needs: [ 'functional_tests', 'behat_tests' ]
     steps:
       - name: Brew Tap Terminus
@@ -206,7 +206,7 @@ jobs:
     name: Package .deb Release
     container:
       image: quay.io/pantheon-public/php-ci:v7.4
-    if: ${{ startsWith(github.ref, 'refs/tags/')  && github.repository_owner == 'pantheon-systems' }}
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
     needs: [ 'functional_tests', 'behat_tests' ]
     steps:
       - name: Download repo content from artifact
@@ -243,7 +243,7 @@ jobs:
           - 'terminus/ubuntu/focal'
           - 'terminus/ubuntu/groovy'
           - 'terminus/ubuntu/hirsute'
-    if: ${{ startsWith(github.ref, 'refs/tags/')  && github.repository_owner == 'pantheon-systems' }}
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
     needs: [ 'package_linux' ]
     steps:
       - name: Download terminus deb as artifact
