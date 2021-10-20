@@ -163,7 +163,7 @@ jobs:
         with:
           user: brianweaver
           repository: ${{ matrix.repository }}
-          files: |
+          path: |
             *.deb
         env:
           PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
