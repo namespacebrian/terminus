@@ -116,6 +116,7 @@ jobs:
     container:
       image: quay.io/pantheon-public/php-ci:v7.4
     if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    needs: [ checkout_build ]
     steps:
       - name: Download repo content from artifact
         uses: actions/download-artifact@v2
