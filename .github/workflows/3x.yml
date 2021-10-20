@@ -160,7 +160,7 @@ jobs:
           name: terminus-deb
       - uses: docker://lpenz/ghaction-packagecloud:v0.2
         with:
-          user: stovak
+          user: brianweaver
           repository: ${{ matrix.repository }}
           files: |
             *.deb
